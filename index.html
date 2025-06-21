@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mr Sports - Free Fire Tournament App</title>
+  <style>
+    body {
+      background: #0f1923; /* Free Fire dark blue */
+      font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .container {
+      background: linear-gradient(145deg, #1a2a3a, #0f1923);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      margin: 20px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #2d455e;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #f9d423, #e14fad, #4cb8c4);
+    }
+    .title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #f9d423;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .subtitle {
+      color: #4cb8c4;
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .app-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #e14fad, #f9d423);
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      border: 3px solid #fff;
+    }
+    .description {
+      font-size: 16px;
+      color: #a7b8c8;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .download-btn {
+      background: linear-gradient(45deg, #e14fad, #f9d423);
+      color: #0f1923;
+      padding: 16px 40px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(233, 76, 161, 0.4);
+      border: none;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(233, 76, 161, 0.6);
+    }
+    .download-btn:active {
+      transform: translateY(1px);
+    }
+    .features {
+      text-align: left;
+      margin: 25px 0;
+      padding: 0;
+    }
+    .features li {
+      list-style-type: none;
+      padding: 8px 0;
+      position: relative;
+      padding-left: 30px;
+      color: #e0e0e0;
+    }
+    .features li::before {
+      content: "•";
+      color: #f9d423;
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .version {
+      font-size: 14px;
+      color: #7a8a99;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="app-icon">MS</div>
+    <div class="title">Mr Sports</div>
+    <div class="subtitle">Free Fire Tournament</div>
+    <div class="description">
+      ফ্রি ফায়ার টুর্নামেন্টের রেজিস্ট্রেশন, সিডিউল এবং লাইভ আপডেটের জন্য অফিসিয়াল অ্যাপ
+    </div>
+    
+    <ul class="features">
+      <li>টুর্নামেন্ট রেজিস্ট্রেশন</li>
+      <li>ম্যাচ সিডিউল ও ফলাফল</li>
+      <li>লাইভ স্ট্রিম লিংক</li>
+      <li>প্রাইজ মানি ডিটেইলস</li>
+      <li>টিম ম্যানেজমেন্ট</li>
+    </ul>
+    
+    <a class="download-btn" href="https://drive.google.com/file/d/19UtK83V3m1JjLBnpLbsG1sBN2qR3tpU5/view?usp=drivesdk">ডাউনলোড করুন</a>
+    
+    <div class="version">ভার্সন 2.1.0 | Free Fire Edition</div>
+  </div>
+
+  <script>
+    // Additional script to prevent zooming on mobile devices
+    document.addEventListener('gesturestart', function(e) {
+      e.preventDefault();
+    });
+    
+    // Prevent double tap zoom on iOS
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function(event) {
+      const now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+  </script>
+
+</body>
+</html>
